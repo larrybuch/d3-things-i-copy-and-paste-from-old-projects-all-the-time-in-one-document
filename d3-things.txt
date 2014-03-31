@@ -40,4 +40,4 @@ d3.csv("path/to/file.csv", function(d, i){
   
 }
 
-// SCALES /////////////////
+// SOMETHING HERE ABOUT AXES, I CAN NEVER FIGURE THEM OUT /////////////////
