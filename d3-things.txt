@@ -1,0 +1,43 @@
+D3 THINGS I COPY AND PASTE FROM OLD PROJECTS ALL THE TIME IN ONE DOCUMENT
+
+
+// MARGIN CONVENTION /////////////////
+var margin = {top: 20, right: 10, bottom: 20, left: 10};
+
+var width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+// SCALES /////////////////
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+
+// GETTING DATA, JSON & CSV /////////////////
+
+d3.json("path/to/file.json", function(error, json) {
+  if (error) return console.warn(error);
+  data = json;
+  visualizeit();
+});
+
+d3.csv("path/to/file.csv", function(d, i){
+  return {
+    date: parseDate(d.date),
+    price: +d.price,
+    ind: i
+  };
+}, function(error, data){
+  
+}
+
+// SCALES /////////////////
