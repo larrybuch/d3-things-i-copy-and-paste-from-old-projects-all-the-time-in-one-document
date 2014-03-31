@@ -41,3 +41,5 @@ d3.csv("path/to/file.csv", function(d, i){
 }
 
 // SOMETHING HERE ABOUT AXES, I CAN NEVER FIGURE THEM OUT /////////////////
+
+// SHOULD PROBABLY ADD SOMETHING ABOUT NESTING /////////////////
